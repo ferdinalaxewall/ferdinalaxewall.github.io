@@ -4,6 +4,7 @@
     --fw-semibold:700;
     --fw-medium:500;
     --fw-reguler:400;
+    --fs-sub-body: 14px;
     --fs-body: 16px;
     --fs-subtitle:18px;
     --fs-title:20px;
@@ -249,9 +250,22 @@ a,a:hover,a:visited{
     -o-transition: all .15s linear;
 }
 
+.home-box svg path{
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.home-box:hover svg path{
+    fill: var(--clr-primary);
+}
+
 .home-box-text{
     opacity: 0;
-    font-size: var(--fs-body);
+    font-size: var(--fs-sub-body);
+    font-weight: var(--fw-medium);
     transition-delay: .3s;
     transition: all .15s linear;
     transform: translateY(10px);
@@ -386,12 +400,16 @@ a,a:hover,a:visited{
 }
 
 .skill-img-group img{
-    margin: 0 25px;
+    margin: 25px;
 }
 
-.skill-wrapper:nth-child(2){
-    margin-top: 25px;
+.skill-img-wrapper{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 
 .education-content-wrapper{
     display: flex;
@@ -446,8 +464,8 @@ a,a:hover,a:visited{
 
 .project-content-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 300px);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(4, 20vw);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     justify-content: center;
@@ -517,19 +535,90 @@ a,a:hover,a:visited{
     background-image: url("../../img/covid-19-web.PNG");
     grid-area: 2 / 3 / 3 / 5;
 }
+#project-box-7 {
+    background-image: url("../../img/covid-19-web.PNG");
+    grid-area: 3 / 1 / 4 / 3; 
+}
+#project-box-8 {
+    background-image: url("../../img/covid-19-web.PNG");
+    grid-area: 3 / 3 / 4 / 4; 
+}
+#project-box-9 {
+    background-image: url("../../img/covid-19-web.PNG");
+    grid-area: 3 / 4 / 4 / 5; 
+}
+#project-box-10 {
+    background-image: url("../../img/rest-countries.PNG");
+    grid-area: 4 / 1 / 5 / 2; 
+}
+#project-box-11 {
+    background-image: url("../../img/rest-countries.PNG");
+    grid-area: 4 / 2 / 5 / 3; 
+}
+#project-box-12 {
+    background-image: url("../../img/rest-countries.PNG");
+    grid-area: 4 / 3 / 5 / 5; 
+}
 
 .project-link{
-    color: var(--clr-primary);
+    color: var(--clr-white);
     display: flex;
     font-weight: var(--fw-medium);
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: rgba(10, 20, 40, 0.8);
-    padding: 10px 20px;
+    padding: 0 25px;
     position: absolute;
     z-index: 3;
+    height: 45px;
     bottom: 0;
     width: 100%;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.project-link:hover{
+    background-color: rgba(10, 20, 40, 1);
+}
+
+.project-name{
+    position: relative;
+    display: block;
+    max-width: 30vw;
+    padding: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-name::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left:0;
+    width: 0;
+    opacity: 0;
+    height: 2px;
+    background-color: var(--clr-white);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+}
+
+.project-link:hover .project-name::after{
+    opacity: 1;
+    width: 50%;
 }
 
 .project-link img{
@@ -615,8 +704,9 @@ a,a:hover,a:visited{
     -o-transform: translateX(5px);
 }
 
-.contact-img{
-    margin-right: 50px;
+.contact-img-wrapper{
+    width: 50%;
+    text-align: center;
 }
 
 .footer-section{
@@ -643,9 +733,7 @@ a,a:hover,a:visited{
 .footer-button-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-around;
     margin: 20px 0;
-    width: 20%;
 }
 
 .footer-description{
@@ -659,6 +747,7 @@ a,a:hover,a:visited{
     display: flex;
     width: 50px;
     height: 50px;
+    margin: 0 10px;
     padding: 10px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -679,4 +768,17 @@ a,a:hover,a:visited{
 
 .footer-button:hover{
     opacity: 0.75;
+}
+
+@media(min-width:1440px){
+
+    .contact-box-wrapper{
+        padding: 40px;
+        padding-left: 80px;
+    }
+
+    .contact-box-description{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
 }
