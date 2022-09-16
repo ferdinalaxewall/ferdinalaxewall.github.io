@@ -44,6 +44,7 @@ body{
 
 body::-webkit-scrollbar{
     width: 6px;
+    height: 0;
 }
 
 body::-webkit-scrollbar-track{
@@ -57,6 +58,43 @@ body::-webkit-scrollbar-thumb{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+.scroll-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--clr-section-box);
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: all .15s linear;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.scroll-top:hover{
+    border-color: var(--clr-white);
+}
+
+.scroll-top img{
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
 }
 
 ul{
@@ -74,6 +112,200 @@ button{
 
 a,a:hover,a:visited{
     text-decoration: none;
+}
+
+.contact-modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.overlay-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 11;
+}
+
+.content-modal{
+    position: relative;
+    z-index: 12;
+    background: var(--clr-section-box);
+    width: 500px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 25px;
+}
+
+.content-modal-title{
+    font-size: var(--fs-head-title);
+    text-align: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.content-modal-title::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 50%;
+    height: 4px;
+    background: var(--clr-primary);
+    border-radius: 5px;
+    transform: translateX(-50%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input-group label{
+    color: var(--clr-white);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-head-title);
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .15s linear;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.contact-form-input{
+    background: var(--clr-footer-button);
+    border: 1px solid transparent;
+    color: var(--clr-white);
+    resize: none;
+    font-family: var(--font-family);
+    font-size: var(--fs-sub-body);
+    border-radius: 5px;
+    padding: 20px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 35px;
+    transition: all .15s linear ;
+    -webkit-transition: all .15s linear ;
+    -moz-transition: all .15s linear ;
+    -ms-transition: all .15s linear ;
+    -o-transition: all .15s linear ;
+}
+
+.contact-form-input:focus ~ label, .contact-form-input:not(:placeholder-shown) ~ label{
+    color: var(--clr-primary);
+    font-size: var(--fs-body);
+    top: 8px;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.contact-form-input:focus, .contact-form-input:not(:placeholder-shown){
+    border-color: var(--clr-primary);
+    padding-top: 38px;
+}
+
+textarea.contact-form-input ~ label{
+    top: 1px;
+    transform: translateY(0);
+    padding: 10px;
+    background-color: var(--clr-footer-button);
+    width: calc(100% - 30px);
+    border-radius: 2.5px 2.5px 0 0;
+    left: 1px;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-border-radius: 2.5px 2.5px 0 0;
+    -moz-border-radius: 2.5px 2.5px 0 0;
+    -ms-border-radius: 2.5px 2.5px 0 0;
+    -o-border-radius: 2.5px 2.5px 0 0;
+}
+
+textarea.contact-form-input:focus ~ label, textarea.contact-form-input:not(:placeholder-shown) ~ label{
+    top: 1px;
+}
+
+textarea.contact-form-input{
+    height: 150px;
+}
+
+textarea.contact-form-input:focus{
+    height: 150px;
+}
+
+.form-button-group{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.contact-form button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    font-weight: var(--fw-semibold);
+    -o-border-radius: 5px;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.contact-form button:hover{
+    opacity: 0.75;
+}
+
+.close-modal-button{
+    margin-right: 10px;
+    background-color: var(--clr-footer-button);
+    color: var(--clr-white);
+}
+
+.contact-submit-button{
+    background-color: var(--clr-primary);
+    color: var(--clr-footer-button);
+}
+
+button:focus, input:focus, textarea:focus{
+    outline: none;
 }
 
 .content-wrapper{
@@ -404,7 +636,7 @@ a,a:hover,a:visited{
 }
 
 .skill-img-wrapper{
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -645,7 +877,8 @@ a,a:hover,a:visited{
 
 .contact-box-wrapper{
     background: var(--clr-section-box);
-    padding: 30px 30px;
+    padding: 30px;
+    padding-left: 50px;
     width: 50%;
     margin-left: -80px;
     border-radius: 0 25px 25px 0;
@@ -771,6 +1004,9 @@ a,a:hover,a:visited{
 }
 
 @media(min-width:1440px){
+    .skill-img-wrapper{
+        width: 75%;
+    }
 
     .contact-box-wrapper{
         padding: 40px;

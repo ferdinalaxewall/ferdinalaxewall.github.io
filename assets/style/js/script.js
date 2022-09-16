@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(".skill-button").click(function(){
         let skillAttr = $(this).attr("skill-attribute");
 
-        $(".skill-wrapper img").each(function(){
+        $(".skill-img-wrapper img").each(function(){
             if ($(this).attr("skill-attribute") == skillAttr) {
                 $(this).fadeIn();
             }else{
@@ -12,7 +12,7 @@ $(document).ready(function(){
 
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
-            $(".skill-wrapper img").fadeIn();
+            $(".skill-img-wrapper img").fadeIn();
         }else{
             $(".skill-button").removeClass("active")
             $(this).addClass("active")
