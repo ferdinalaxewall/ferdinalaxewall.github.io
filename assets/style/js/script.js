@@ -21,11 +21,11 @@ $(document).ready(function(){
 
     $(".contact-box-button").click(function(){
         $(".contact-modal").attr("data-show-modal", "show");
+        $("body").attr("data-show-modal", "show");
 
         setTimeout(() => {
             if ($(".contact-modal").attr("data-show-modal") == "show") {
                 doCloseModalByOverlay();
-                
             }
         }, 50);
     });
@@ -52,6 +52,7 @@ $(document).ready(function(){
 
         if (!$(event.target).hasClass("project-link")) {
             $(".lightbox-modal").attr("data-show-modal", "show");
+            $("body").attr("data-show-modal", "show");
             $(".lightbox-modal .modal-body").append(imgElement);
             $(".lightbox-title").text(projectTitle)
             
@@ -71,6 +72,7 @@ $(document).ready(function(){
 
 function doCloseModal(modal){
     $(modal).removeAttr("data-show-modal");
+    $("body").removeAttr("data-show-modal");
 
     if ($(modal).hasClass("lightbox-modal")) {
         $(modal).find(".modal-body img").removeAttr("data-image-show");

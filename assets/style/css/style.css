@@ -32,7 +32,6 @@ html{
 
 body{
     width: 100%;
-    min-height: 100vh;
     background: var(--bg-gradient);
     font-family: var(--font-family);
     overflow-x: hidden;
@@ -40,6 +39,11 @@ body{
     font-weight: var(--fw-reguler);
     font-size: var(--fs-body);
     scrollbar-color: var(--clr-primary) #14213D;
+}
+
+body[data-show-modal=show]{
+    height: 100vh;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -323,7 +327,7 @@ button:focus, input:focus, textarea:focus{
 }
 
 .content-wrapper{
-    padding: 20px 0;
+    padding-top: 0;
     margin: auto 80px;
 }
 
@@ -376,8 +380,10 @@ button:focus, input:focus, textarea:focus{
 }
 
 .navbar-link{
-    display: block;
+    display: flex;
     padding: 2.5px 7.5px;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -390,6 +396,7 @@ button:focus, input:focus, textarea:focus{
     background-color: var(--clr-primary);
     border-radius: 50%;
     left: 50%;
+    bottom: -7.5px;
     opacity: 0;
     transform: translateX(-50%);
     transition: all .15s linear;
@@ -1013,6 +1020,7 @@ button:focus, input:focus, textarea:focus{
 
 .footer-copyright-text{
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
     font-weight: var(--fw-reguler);
 }
 
@@ -1041,6 +1049,11 @@ button:focus, input:focus, textarea:focus{
     opacity: 1;
 }
 
+.lightbox-modal[data-show-modal="show"] + .content-wrapper{
+    height: 100vh;
+    overflow: hidden;
+}
+
 .lightbox-modal .overlay-modal{
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -1062,7 +1075,7 @@ button:focus, input:focus, textarea:focus{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding-bottom: 10px;
     transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
@@ -1147,12 +1160,44 @@ button:focus, input:focus, textarea:focus{
         margin: auto 40px;
     }
 
+    .skill-img-group{
+        margin-left: -40px;
+        margin-right: -40px;
+        padding: 30px 40px;
+    }
+
     .contact-box-wrapper{
         margin-left: 0;
     }
 
     .contact-content-wrapper{
         flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .contact-img-wrapper{
+        width: 100%;
+    }
+
+    .contact-img-wrapper img{
+        width: inherit;
+        height:300px;
+    }
+
+    .contact-box-wrapper{
+        width: 75%;
+        text-align: center;
+        padding: 30px;
+        border-radius: 0 0 30% 30%;
+        -webkit-border-radius: 0 0 30% 30%;
+        -moz-border-radius: 0 0 30% 30%;
+        -ms-border-radius: 0 0 30% 30%;
+        -o-border-radius: 0 0 30% 30%;
+    }
+    .contact-box-description{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
 
 
@@ -1263,6 +1308,10 @@ button:focus, input:focus, textarea:focus{
         right: 0;
     }
 
+    .contact-box-wrapper{   
+        width: 100%;
+    }
+
     .career-box::after{
         left: 0;
     }
@@ -1295,6 +1344,78 @@ button:focus, input:focus, textarea:focus{
     #project-box-12 { grid-area: 6 / 2 / 7 / 4; }
 }
 
+@media (max-width:550px){
+
+    .content-wrapper{
+        margin: auto 20px;
+        padding: 0;
+    }
+
+    .navbar{
+        background-color:var(--clr-section-box);
+        z-index: 8;
+        position: fixed;
+        bottom: 0;
+        box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.35)  ;
+        width: 100vw;
+        border-radius: 15px 15px 0 0;
+        margin-left: -20px;
+        margin-right: -20px;
+        -webkit-border-radius: 15px 15px 0 0;
+        -moz-border-radius: 15px 15px 0 0;
+        -ms-border-radius: 15px 15px 0 0;
+        -o-border-radius: 15px 15px 0 0;
+}
+
+    .navbar-list{
+        gap: 10px;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .navbar-list li{
+        margin: 0;
+    }
+
+    .navbar-link::after{
+        bottom: -5px;
+        width: 0;
+        height: 3px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .navbar-link:hover::after{
+        width: 30%;
+    }
+
+    .contact-modal .content-modal{
+        width: 90vw ;
+    }
+
+    .content-modal-title{
+        font-size: var(--fs-title);
+    }
+
+    .content-modal-title::after{
+        height: 2px;
+        bottom: -7px;
+    }
+
+    .scroll-top{
+        right: 10px;
+        bottom: 65px;
+        transform: scale(0.85);
+        -webkit-transform: scale(0.85);
+        -moz-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+        -o-transform: scale(0.85);
+}
+}
+
 @media (max-width:468px) {
     :root{
         --fs-sub-body:12px;
@@ -1304,6 +1425,74 @@ button:focus, input:focus, textarea:focus{
         --fs-head-title:20px;
         --fs-page-title:22px;
         --fs-hero-title:32px;
-        --fs-hero-subtitle:24px;
+        --fs-hero-subtitle:20px;
+    }
+
+    .navbar-link svg{
+        width: 32.5px;
+        height: 32.5px;
+    }
+
+    #home-section{
+        height: auto;
+    }
+
+    .home-subtitle{
+        margin-top: 10px;
+    }
+
+    .skill-img-group{
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px 30px;
+    }
+
+    .skill-img-wrapper{
+        gap: 35px;
+    }
+
+    .skill-img-group img{
+        margin: 0;
+    }
+
+    .project-content-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 25vh);
+    }
+
+    #project-box-1 { grid-area: 1 / 1 / 2 / 2; }
+    #project-box-2 { grid-area: 2 / 1 / 3 / 2; }
+    #project-box-3 { grid-area: 3 / 1 / 4 / 2; }
+    #project-box-4 { grid-area: 4 / 1 / 5 / 2; }
+    #project-box-5 { grid-area: 5 / 1 / 6 / 2; }
+    #project-box-6 { grid-area: 6 / 1 / 7 / 2; }
+    #project-box-7 { grid-area: 7 / 1 / 8 / 2; }
+    #project-box-8 { grid-area: 8 / 1 / 9 / 2; }
+    #project-box-9 { grid-area: 9 / 1 / 10 / 2; }
+    #project-box-10 { grid-area: 10 / 1 / 11 / 2; }
+    #project-box-11 { grid-area: 11 / 1 / 12 / 2; }
+    #project-box-12 { grid-area: 12 / 1 / 13 / 2; }
+
+    .project-name{
+        max-width: 75vw;
+    }
+
+    .project-link{
+        padding-left: 20px;
+    }
+
+    .footer-title{
+        font-size: 24px;
+    }
+
+    .footer-description{
+        font-size: var(--fs-body);
+    }
+}
+
+@media (max-width:350px){
+    .navbar-link svg{
+        width: 25px;
+        height: 25px;
     }
 }
