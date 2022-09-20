@@ -1413,7 +1413,11 @@ button:focus, input:focus, textarea:focus{
         -moz-transform: scale(0.85);
         -ms-transform: scale(0.85);
         -o-transform: scale(0.85);
-}
+    }
+
+    .footer-section{
+        margin-bottom: 55px;
+    }
 }
 
 @media (max-width:468px) {
