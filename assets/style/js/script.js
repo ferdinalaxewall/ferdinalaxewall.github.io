@@ -198,7 +198,7 @@ $(document).ready(function(){
     $(".project-box").click(function(event){
         let projectTitle = $(this).attr("data-project-title");
         let imgName = $(this).attr("data-img-name");
-        let imgPath = "./assets/img/"+imgName+".PNG";
+        let imgPath = "./assets/img/"+imgName+".png";
         let imgElement = '<img src="'+imgPath+'" alt="'+projectTitle+'" loading="lazy">';
 
         if (!$(event.target).hasClass("project-link")) {
@@ -319,7 +319,7 @@ $(window).scroll(function () {
     
     //  Contact Section Parallax
 
-    if (wScroll > $("#contact-section").offset().top - 300) {
+    if (wScroll > $("#projects-section").height() + $("#projects-section").offset().top - 400) {
         $("#contact-section .section-title").attr("data-scroll", "show");
         $(".contact-box-wrapper").attr("data-scroll", "show");
         $(".contact-img").attr("data-scroll", "show");
