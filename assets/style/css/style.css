@@ -890,6 +890,8 @@ button:focus, input:focus, textarea:focus{
     align-items: center;
     justify-content: space-between;
     height: 170px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .education-box-wrapper:not(:last-child){
