@@ -227,18 +227,21 @@ $(window).scroll(function () {
     // About Section Parallax
 
     if (wScroll > $("#about-section").offset().top - 300) {
+        $(".scroll-top").attr("data-scroll", "show");
         $(".about-content-wrapper img").attr("data-scroll", "show");
         $("#about-section .section-title").attr("data-scroll", "show")
         
         setTimeout(() => {
             $("#about-section .section-title").attr("data-scroll-title", "show")
         }, 150);
-
+        
         $(".about-text").each(function(i){
             setTimeout(() => {
                 $(this).attr("data-scroll", "show")
             }, (i+1) * 150);
         });
+    }else{
+        $(".scroll-top").removeAttr("data-scroll", "show");
     }
 
     // Services Section Parallax

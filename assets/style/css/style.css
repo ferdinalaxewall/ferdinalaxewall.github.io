@@ -80,7 +80,10 @@ body::-webkit-scrollbar-thumb{
     justify-content: center;
     align-items: center;
     padding: 0;
+    opacity: 0;
+    visibility: hidden;
     transition: all .15s linear;
+    transform: scale(0.2);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -89,6 +92,20 @@ body::-webkit-scrollbar-thumb{
     -moz-transition: all .15s linear;
     -ms-transition: all .15s linear;
     -o-transition: all .15s linear;
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    -o-transform: scale(0.2);
+}
+
+.scroll-top[data-scroll=show]{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 
 .scroll-top:hover{
