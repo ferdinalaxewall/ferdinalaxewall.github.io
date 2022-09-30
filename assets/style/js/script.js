@@ -225,8 +225,14 @@ $(window).scroll(function () {
     let wScroll = $(this).scrollTop();
 
     // About Section Parallax
+    if (wScroll < 240) {
+        $(".navbar-link").removeClass("active");
+        $(".navbar-link[href='#home-section']").addClass("active");
+    }
 
     if (wScroll > $("#about-section").offset().top - 300) {
+        $(".navbar-link").removeClass("active");
+        $(".navbar-link[href='#about-section']").addClass("active");
         $(".scroll-top").attr("data-scroll", "show");
         $(".about-content-wrapper img").attr("data-scroll", "show");
         $("#about-section .section-title").attr("data-scroll", "show")
@@ -264,6 +270,8 @@ $(window).scroll(function () {
     
     if (wScroll > $("#skills-section").offset().top - 300) {
         $("#skills-section .section-title").attr("data-scroll", "show");
+        $(".navbar-link").removeClass("active");
+        $(".navbar-link[href='#skills-section']").addClass("active");
         
         setTimeout(() => {
             $("#skills-section .section-title").attr("data-scroll-title", "show");
@@ -288,6 +296,8 @@ $(window).scroll(function () {
     
     if (wScroll > $("#education-section").offset().top - 300) {
         $("#education-section .section-title").attr("data-scroll", "show");
+        $(".navbar-link").removeClass("active");
+        $(".navbar-link[href='#education-section']").addClass("active");
         
         setTimeout(() => {
             $("#education-section .section-title").attr("data-scroll-title", "show");
@@ -308,6 +318,8 @@ $(window).scroll(function () {
     
     if (wScroll > $("#projects-section").offset().top - 300) {
         $("#projects-section .section-title").attr("data-scroll", "show");
+        $(".navbar-link").removeClass("active");
+        $(".navbar-link[href='#projects-section']").addClass("active");
         
         setTimeout(() => {
             $("#projects-section .section-title").attr("data-scroll-title", "show");
@@ -324,6 +336,8 @@ $(window).scroll(function () {
 
     if (wScroll > $("#projects-section").height() + $("#projects-section").offset().top - 400) {
         $("#contact-section .section-title").attr("data-scroll", "show");
+        $(".navbar-link").removeClass("active");
+        $(".navbar-link[href='#contact-section']").addClass("active");
         $(".contact-box-wrapper").attr("data-scroll", "show");
         $(".contact-img").attr("data-scroll", "show");
         setTimeout(() => {
