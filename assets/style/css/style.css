@@ -219,7 +219,7 @@ a,a:hover,a:visited{
 .input-group label{
     color: var(--clr-white);
     font-weight: var(--fw-medium);
-    font-size: var(--fs-head-title);
+    font-size: var(--fs-body);
     position: absolute;
     pointer-events: none;
     left: 10px;
@@ -995,7 +995,7 @@ button:focus, input:focus, textarea:focus{
 .project-content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 22vw);
-    grid-template-rows: repeat(4, 22vw);
+    grid-template-rows: repeat(5, 22vw);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     justify-content: center;
@@ -1057,55 +1057,67 @@ button:focus, input:focus, textarea:focus{
 .project-box:hover::after{
     visibility: hidden;
     opacity: 0;
-}   
+}
 
 #project-box-1 {
-    background-image: url("../../img/loopstudios.png");
+    background-image: url("../../img/super-pc.png");
     grid-area: 1 / 1 / 2 / 3;
 }
 #project-box-2 {
-    background-image: url("../../img/bumdes-sm.png");
+    background-image: url("../../img/mykiss-web.png");
     grid-area: 1 / 3 / 2 / 4;
 }
 #project-box-3 {
-    background-image: url("../../img/sunnyside.png");
+    background-image: url("../../img/express-jwt-mongodb.png");
     grid-area: 1 / 4 / 2 / 5;
 }
 #project-box-4 {
-    background-image: url("../../img/smait-abu-bakar.png");
+    background-image: url("../../img/sunnyside.png");
     grid-area: 2 / 1 / 3 / 2;
 }
 #project-box-5 {
-    background-image: url("../../img/rest-countries-sm.png");
+    background-image: url("../../img/bumdes-sm.png");
     grid-area: 2 / 2 / 3 / 3;
 }
 #project-box-6 {
-    background-image: url("../../img/covid-19-web.png");
+    background-image: url("../../img/loopstudios.png");
     grid-area: 2 / 3 / 3 / 5;
 }
 #project-box-7 {
-    background-image: url("../../img/bpm.png");
+    background-image: url("../../img/smait-abu-bakar.png");
     grid-area: 3 / 1 / 4 / 3; 
 }
 #project-box-8 {
-    background-image: url("../../img/intro-section-sm.png");
+    background-image: url("../../img/rest-countries-sm.png");
     grid-area: 3 / 3 / 4 / 4; 
 }
 #project-box-9 {
-    background-image: url("../../img/advice-generator.png");
+    background-image: url("../../img/covid-19-web.png");
     grid-area: 3 / 4 / 4 / 5; 
 }
 #project-box-10 {
-    background-image: url("../../img/expanses-chart.png");
+    background-image: url("../../img/bpm.png");
     grid-area: 4 / 1 / 5 / 2; 
 }
 #project-box-11 {
-    background-image: url("../../img/order-summary.png");
+    background-image: url("../../img/intro-section-sm.png");
     grid-area: 4 / 2 / 5 / 3; 
 }
 #project-box-12 {
-    background-image: url("../../img/central-adventure.png");
+    background-image: url("../../img/advice-generator.png");
     grid-area: 4 / 3 / 5 / 5; 
+}
+#project-box-13 {
+    background-image: url("../../img/expanses-chart.png");
+    grid-area: 5 / 1 / 6 / 3;
+}
+#project-box-14 {
+    background-image: url("../../img/order-summary.png");
+    grid-area: 5 / 3 / 6 / 4;
+}
+#project-box-15 {
+    background-image: url("../../img/central-adventure.png");
+    grid-area: 5 / 4 / 6 / 5;
 }
 
 .project-link{
