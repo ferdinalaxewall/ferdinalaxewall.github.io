@@ -8,8 +8,8 @@ export const ProjectCard = ({ title, description, icon, link }) => {
             {icon}
           </div>
           <div className="flex flex-col">
-            <h3 className="font-medium">{title}</h3>
-            <p className="text-sm text-white/70 font-light">{description}</p>
+            <h3 className="font-medium text-sm md:text-base">{title}</h3>
+            <p className="text-xs md:text-sm text-white/70 font-light">{description}</p>
           </div>
       </div>
       {link && (

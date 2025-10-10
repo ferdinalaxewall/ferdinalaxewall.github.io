@@ -43,6 +43,26 @@ body {
   @apply flex items-center justify-between gap-4 pb-4 pt-2 me-4
 }
 
+.highlighted-text {
+  @apply inline-block relative;
+}
+
+.highlighted-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  height: 3px;
+  z-index: 2;
+  background-color: var(--color-indigo-400);
+  @apply rounded-lg;
+}
+
+.project-card:nth-child(even){
+  @apply lg:-translate-y-4;
+}
+
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
