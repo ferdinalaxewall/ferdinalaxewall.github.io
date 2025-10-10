@@ -63,6 +63,27 @@ body {
   @apply lg:-translate-y-4;
 }
 
+section#social-media {
+  background-image: url("/images/social-media-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section#profile-picture {
+  background-image: url("/images/profile-background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+section#experience {
+  background-image: url("/images/half-earth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const ExperienceCard = ({ imgLink, position, year, company, imgClass }) => {
   return (
-    <div className="flex flex-col border border-white/5 hover:border-white/30 bg-black/40 items-center justify-center text-center rounded-lg py-6 px-3 gap-8 w-[150px] 2xl:w-[200px] h-[250px] transition-all project-card">
+    <div className="flex flex-col border border-white/5 hover:border-white/30 bg-black/40 backdrop-blur-2xl items-center justify-center text-center rounded-lg py-6 px-3 gap-8 w-[150px] 2xl:w-[200px] h-[250px] transition-all project-card">
         <div className={`w-[75px] h-[75px] grid place-items-center p-2 rounded-full  ${imgClass}`}>
             <Image src={imgLink} width={75} height={75} alt={company} />
         </div>
