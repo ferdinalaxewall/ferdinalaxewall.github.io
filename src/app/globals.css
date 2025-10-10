@@ -23,7 +23,7 @@ body {
   @apply flex flex-row items-center justify-between w-full px-2;
 }
 
-.social-media-box:not(:last-child) {
+.social-media-box:not(:last-child), .project-box:not(:last-child) {
   @apply border-b border-b-white/5;
 }
 
@@ -37,4 +37,27 @@ body {
 
 .social-media-box:is(:last-child) {
   @apply pt-3;
+}
+
+.project-box {
+  @apply flex items-center justify-between gap-4 pb-4 pt-2 me-4
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.5);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
 }

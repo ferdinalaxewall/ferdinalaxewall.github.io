@@ -4,7 +4,7 @@ export const SocialMediaCard = ({ icon, title, name, link}) => {
   return (
     <div className="social-media-box">
         <div className="flex flex-row items-center gap-4">
-            <div className="text-indigo-400 bg-black p-2 rounded">
+            <div className="text-indigo-400 bg-indigo-500/10 p-2 rounded">
                 {icon}
             </div>
             <div className="flex flex-col">

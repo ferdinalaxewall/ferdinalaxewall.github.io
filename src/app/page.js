@@ -1,15 +1,119 @@
 import { FaFilePdf, FaGithub, FaGitlab, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { BsPersonFillGear } from "react-icons/bs";
+import { MdCastForEducation, MdOutlineAssessment, MdPinDrop, MdWaterDrop } from "react-icons/md";
+import { LuRadioTower } from "react-icons/lu";
+import { BiTrip } from "react-icons/bi";
+import { CgWebsite } from "react-icons/cg";
+import { FaBuildingUser, FaDollarSign, FaHandHoldingDollar, FaMosque, FaPersonRunning, FaUserGroup } from "react-icons/fa6";
+import { RiAdvertisementLine } from "react-icons/ri";
+import { BsQrCodeScan } from "react-icons/bs";
 import { SocialMediaCard } from "@/components/card/SocialMediaCard";
 import { ExperienceCard } from "@/components/card/ExperienceCard";
-import Image from "next/image";
+import { ProjectCard } from "@/components/card/ProjectCard";
 
 export default function Home() {
+  const projects = [
+    {
+      title: "Member Management & Registration",
+      description: "Asosiasi Pengusaha & Pengelola Dapur Makan Bergizi Gratis - APPDMBGI",
+      icon: <FaUserGroup className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Water Bill Payment Application",
+      description: "PDAM Tirta Agara",
+      icon: <MdWaterDrop className="w-[25px] h-[25px]" />,
+      link: "https://pdamtirtaagara.com/",
+    },
+    {
+      title: "SRC QRIS Soundbox",
+      description: "Sampoerna Retail Community - SRC",
+      icon: <BsQrCodeScan className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Running Registration Application",
+      description: "Nusantara Run",
+      icon: <FaPersonRunning className="w-[25px] h-[25px]" />,
+      link: "https://nusantararun.id/",
+    },
+    {
+      title: "CTS Company Profile",
+      description: "PT Catalyst Technology Solution - CTS",
+      icon: <CgWebsite className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Finance & Accounting Application",
+      description: "PAM Cargo",
+      icon: <FaDollarSign className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "IOT Crusher Management System",
+      description: "PT Solusi Bangun Andalas",
+      icon: <LuRadioTower className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Hajj and Umrah Travel Application",
+      description: "PT Gamal Hikmah Pusaka",
+      icon: <FaMosque className="w-[25px] h-[25px]" />,
+      link: "https://gubkhajiumroh.id/",
+    },
+    {
+      title: "Waqf Management Application",
+      description: "Masyarakat Ekonomi Syariah - MES",
+      icon: <FaHandHoldingDollar className="w-[25px] h-[25px]" />,
+      link: "https://wakafmes.id/",
+    },
+    {
+      title: "Advertising Service Application",
+      description: "INFINA Indonesia",
+      icon: <RiAdvertisementLine className="w-[25px] h-[25px]" />,
+      link: "https://infina.co.id/",
+    },
+    {
+      title: "Travel Service Application",
+      description: "J-Trip Indonesia",
+      icon: <BiTrip className="w-[25px] h-[25px]" />,
+      link: "https://jtrip.id/",
+    },
+    {
+      title: "Overseas Student Registration Application",
+      description: "Atlas Edu",
+      icon: <MdCastForEducation className="w-[25px] h-[25px]" />,
+      link: "https://atlas-edu.com/",
+    },
+    {
+      title: "Travel Service Application",
+      description: "PT MyKiss Solution Technology",
+      icon: <BiTrip className="w-[25px] h-[25px]" />,
+      link: "https://mykiss.id/",
+    },
+    {
+      title: "HR Management Application",
+      description: "PT Harmony Land Group",
+      icon: <BsPersonFillGear className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Property Consultant Management Application",
+      description: "Mitra Mugi Properti",
+      icon: <FaBuildingUser className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Lightech Assement Application",
+      description: "PT Academia Citra Abadi",
+      icon: <MdOutlineAssessment className="w-[25px] h-[25px]" />,
+    },
+    {
+      title: "Company Profile with Partnership Management",
+      description: "CV Karya Dawoon Indonesia",
+      icon: <MdPinDrop className="w-[25px] h-[25px]" />,
+      link: "https://dawoonindonesia.com/"
+    },
+  ]
   return (
     <div className="grid grid-cols-12 lg:grid-rows-2 gap-2 items-stretch justify-center h-full w-ful my-auto mx-0 min-h-screen p-4">
       <div className="col-span-12 sm:col-span-12 lg:col-span-5 profile-box">
           <div className="flex flex-col justify-center   gap-12 items-start h-full">
               <div className="flex flex-row flex-wrap items-center gap-4">
-                  <div className="w-[50px] h-[50px] bg-indigo-500 rounded-full grid place-items-center text-xl">
+                  <div className="w-[50px] h-[50px] bg-indigo-500/50 rounded-full grid place-items-center text-xl">
                     👋
                   </div>
                   <div className="flex flex-col">
@@ -53,7 +157,23 @@ export default function Home() {
           </div>
       </div>
       <div className="col-span-12 sm:col-span-6 lg:col-span-5 profile-box">
-          Box Satu
+          <div className="flex flex-col mb-4">
+            <h2 className="font-semibold text-2xl mb-4">Featured Projects</h2>
+            <p>Showcasing my best work and technical expertise</p>
+            <em className="text-white/70">"Each project represents a unique challenge conquered with code"</em>
+          </div>
+
+          <div className="flex flex-col gap-2 xl:h-[285px] overflow-y-auto custom-scrollbar">
+            {projects.map((project, index) => (
+              <ProjectCard 
+                key={index}
+                title={project.title}
+                description={project.description}
+                icon={project.icon}
+                link={project.link}
+              />
+            ))}
+          </div>
       </div>
     </div>
   );
