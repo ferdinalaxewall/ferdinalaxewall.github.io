@@ -26,7 +26,7 @@ export default function Home() {
           </div>
       </div>
       <div className="col-span-12 sm:col-span-6 lg:col-span-4 profile-box grid place-items-center">
-        <div className="border border-white/20 p-3 rounded-lg backdrop-blur-2xl flex flex-col w-full">
+        <div className="border border-white/10 p-3 rounded-lg backdrop-blur-2xl flex flex-col w-full">
           <SocialMediaCard icon={<FaLinkedin className="w-[25px] h-[25px]" />} title="LinkedIn" name="Muhamad Ferdinal" link="https://linkedin.com/in/ferdinalaxewall/" />
           <SocialMediaCard icon={<FaGithub className="w-[25px] h-[25px]" />} title="GitHub" name="ferdinalaxewall" link="https://github.com/ferdinalaxewall/" />
           <SocialMediaCard icon={<FaGitlab className="w-[25px] h-[25px]" />} title="GitLab" name="ferdinalaxe" link="https://gitlab.com/ferdinalaxe/" />
@@ -41,7 +41,7 @@ export default function Home() {
       </div>
       <div className="col-span-12 sm:col-span-6 lg:col-span-7 profile-box">
           <div className="flex flex-col mb-12">
-            <h2 className="font-medium text-2xl mb-4">Experience: Software Developer Journey</h2>
+            <h2 className="font-semibold text-2xl mb-4">Experience: Software Developer Journey</h2>
             <p>Take a scroll through my career path!</p>
             <em className="text-white/70">"Each milestone adds a new layer to my skillset, Let's dive into the journey."</em>
           </div>

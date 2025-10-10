@@ -24,7 +24,7 @@ body {
 }
 
 .social-media-box:not(:last-child) {
-  @apply border-b border-b-white/10;
+  @apply border-b border-b-white/5;
 }
 
 .social-media-box:not(:first-child, :last-child) {
