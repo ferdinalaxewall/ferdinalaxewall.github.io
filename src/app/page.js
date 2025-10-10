@@ -1,8 +1,10 @@
+import { Linkedin } from "lucide-react";
+
 export default function Home() {
   return (
-    <div className="grid grid-cols-12 grid-rows-2 gap-2 items-stretch justify-center h-full w-ful my-auto mx-0 min-h-screen p-4">
+    <div className="grid grid-cols-12 lg:grid-rows-2 gap-2 items-stretch justify-center h-full w-ful my-auto mx-0 min-h-screen p-4">
       <div className="col-span-12 sm:col-span-12 lg:col-span-5 profile-box">
-          <div className="flex flex-col justify-center gap-12 items-start h-full">
+          <div className="flex flex-col justify-start gap-12 items-start h-full">
               <div className="flex flex-row flex-wrap items-center gap-4">
                   <div className="w-[50px] h-[50px] bg-indigo-500 rounded-full"></div>
                   <div className="flex flex-col">
@@ -18,8 +20,8 @@ export default function Home() {
               </div>
           </div>
       </div>
-      <div className="col-span-12 sm:col-span-6 lg:col-span-3 profile-box bg-white/10">
-          Box Satu
+      <div className="col-span-12 sm:col-span-6 lg:col-span-3 profile-box">
+        Box Satu
       </div>
       <div className="col-span-12 sm:col-span-6 lg:col-span-4 profile-box">
           Box Satu
