@@ -141,7 +141,7 @@ export default function Home() {
       </section>
       <section className="col-span-12 sm:col-span-6 lg:col-span-3 profile-box-without-padding relative" id="profile-picture">
           <div className="absolute right-0 bottom-0 overflow-hidden w-full h-full pt-12 ps-12 ">
-            <img src="/images/ferdinalaxewall-display.jpg" alt="Ferdinalaxewall Profile Picture" className="rounded-tl-2xl w-full h-full object-cover" />
+            <img src="/images/ferdinalaxewall-display.jpg" alt="Ferdinalaxewall Profile Picture" className="rounded-tl-2xl w-full h-full object-cover" loading="lazy" />
           </div>
       </section>
       <section className="col-span-12 sm:col-span-6 lg:col-span-7 profile-box" id="experience">
