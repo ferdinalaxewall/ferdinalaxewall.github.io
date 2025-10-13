@@ -131,6 +131,7 @@ export default function Home() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.4, delay: 0.4, type: "spring", stiffness: 200 }}
+                    whileHover={{ scale: 1.1, rotate: 10 }}
                     className="w-[50px] h-[50px] bg-indigo-500/50 rounded-full grid place-items-center text-xl"
                   >
                     👋
