@@ -171,7 +171,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="border border-white/10 p-3 rounded-lg backdrop-blur-2xl flex flex-col w-full"
         >
-          <SocialMediaCard icon={<FaLinkedin className="w-[25px] h-[25px]" />} title="LinkedIn" name="Muhamad Ferdinal" link="https://linkedin.com/in/ferdinalaxewall/" index={0} />
+          <SocialMediaCard icon={<FaLinkedin className="w-[25px] h-[25px]" />} title="LinkedIn" name="Muhamad Ferdinal" link="https://linkedin.com/in/muhamad-ferdinal/" index={0} />
           <SocialMediaCard icon={<FaGithub className="w-[25px] h-[25px]" />} title="GitHub" name="ferdinalaxewall" link="https://github.com/ferdinalaxewall/" index={1} />
           <SocialMediaCard icon={<FaGitlab className="w-[25px] h-[25px]" />} title="GitLab" name="ferdinalaxe" link="https://gitlab.com/ferdinalaxe/" index={2} />
           <SocialMediaCard icon={<FaInbox className="w-[25px] h-[25px]" />} title="Email" name="ferdinalraihan@gmail.com" link="mailto:ferdinalraihan@gmail.com" index={3} />
