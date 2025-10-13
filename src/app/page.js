@@ -1,4 +1,4 @@
-import { FaFilePdf, FaGithub, FaGitlab, FaInbox, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFilePdf, FaGithub, FaGitlab, FaInbox, FaLinkedin } from "react-icons/fa";
 import { BsPersonFillGear } from "react-icons/bs";
 import { MdCastForEducation, MdOutlineAssessment, MdPinDrop, MdWaterDrop } from "react-icons/md";
 import { LuRadioTower } from "react-icons/lu";
@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <main className="grid grid-cols-12 lg:grid-rows-2 gap-2 items-stretch justify-center h-full w-full my-auto mx-0 min-h-screen p-4">
       <section className="col-span-12 sm:col-span-12 lg:col-span-5 profile-box" id="profile">
-          <div className="flex flex-col justify-center   gap-12 items-start h-full">
+          <div className="flex flex-col justify-center gap-8 items-start h-full">
               <div className="flex flex-row flex-wrap items-center gap-4">
                   <div className="w-[50px] h-[50px] bg-indigo-500/50 rounded-full grid place-items-center text-xl">
                     👋
@@ -122,7 +122,7 @@ export default function Home() {
                   </div>
               </div>
               <div className="flex flex-col gap-6">
-                <h3 className="font-semibold text-3xl">I'm <span className="highlighted-text">Architect Robust</span>, Scalable Web Solutions That Turn Bold Ideas Into Lightning-Fast, Reliable Digital Experiences.</h3>
+                <h3 className="font-semibold text-2xl">I'm <span className="highlighted-text">Architect Robust</span>, Scalable Web Solutions That Turn Bold Ideas Into Lightning-Fast, Reliable Digital Experiences.</h3>
                 <p className="text-sm text-white/70 font-light">
                   I'm an approved software developer with 4+ years of experience delivering high-impact, battle-tested solutions across fintech, eCommerce, inventory, logistics, healthcare, and edtech. From zero-downtime payment gateways to real-time supply-chain dashboards, I turn complex business problems into elegant, scalable code that users trust and teams love to maintain.
                 </p>
@@ -134,7 +134,6 @@ export default function Home() {
           <SocialMediaCard icon={<FaLinkedin className="w-[25px] h-[25px]" />} title="LinkedIn" name="Muhamad Ferdinal" link="https://linkedin.com/in/ferdinalaxewall/" />
           <SocialMediaCard icon={<FaGithub className="w-[25px] h-[25px]" />} title="GitHub" name="ferdinalaxewall" link="https://github.com/ferdinalaxewall/" />
           <SocialMediaCard icon={<FaGitlab className="w-[25px] h-[25px]" />} title="GitLab" name="ferdinalaxe" link="https://gitlab.com/ferdinalaxe/" />
-          <SocialMediaCard icon={<FaInstagram className="w-[25px] h-[25px]" />} title="Instagram" name="@ferdinalaxewall" link="https://instagram.com/ferdinalaxewall/" />
           <SocialMediaCard icon={<FaInbox className="w-[25px] h-[25px]" />} title="Email" name="ferdinalraihan@gmail.com" link="mailto:ferdinalraihan@gmail.com" />
           <SocialMediaCard icon={<FaFilePdf className="w-[25px] h-[25px]" />} title="Resume" name="Muhamad Ferdinal" link="/documents/Resume-Muhamad-Ferdinal.pdf" />
         </div>
@@ -146,30 +145,30 @@ export default function Home() {
       </section>
       <section className="col-span-12 sm:col-span-6 lg:col-span-7 profile-box" id="experience">
           <div className="flex flex-col mb-12">
-            <h2 className="font-semibold text-2xl mb-4"><span className="highlighted-text">Experience</span>: Software Developer Journey</h2>
+            <h2 className="font-semibold text-xl mb-4"><span className="highlighted-text">Experience</span>: Software Developer Journey</h2>
             <p>Take a scroll through my career path!</p>
             <em className="text-white/70">"Each milestone adds a new layer to my skillset, Let's dive into the journey."</em>
           </div>
           <div className="flex flex-row flex-wrap gap-4 2xl:gap-8 w-full justify-center">
             <ExperienceCard imgLink="/images/company-logo/radar-bogor.png" position="Web Developer" year="2019" company="Radar Bogor" />
             <ExperienceCard imgLink="/images/company-logo/uncal-digital-technology.png" position="Software Developer" year="2022 - 2023" company="UNCAL Digital Technology" />
-            <ExperienceCard imgLink="/images/company-logo/garap-digital-nusantara.webp" position="Outsource Fullstack Developer" year="2022" company="UNCAL Digital Technology" />
+            <ExperienceCard imgLink="/images/company-logo/garap-digital-nusantara.webp" position="Fullstack Developer" year="2022" company="UNCAL Digital Technology" />
             <ExperienceCard imgLink="/images/company-logo/rembon-karya-digital.png" position="Backend Developer" year="2023 - Present" company="Rembon Karya Digital" imgClass="bg-white" />
           </div>
       </section>
       <section className="col-span-12 sm:col-span-6 lg:col-span-5 profile-box" id="featured-projects">
           <div className="flex flex-col mb-4">
             <div className="flex flex-row items-center mb-4">
-              <h2 className="font-semibold text-2xl"><span className="highlighted-text">Featured</span> Projects</h2>
+              <h2 className="font-semibold text-xl"><span className="highlighted-text">Featured</span> Projects</h2>
               <span className="ms-2 bg-indigo-400 w-[20px] h-[20px] text-white rounded-full text-xs grid place-items-center -mt-4">{projects.length}</span>
             </div>
             <p>Showcasing my best work and technical expertise</p>
             <em className="text-white/70">"Each project represents a unique challenge conquered with code"</em>
           </div>
 
-          <div className="flex flex-col gap-2 xl:h-[285px] overflow-y-auto custom-scrollbar">
+          <div className="flex flex-col gap-2 xl:h-[255px] overflow-y-auto custom-scrollbar">
             {projects.map((project, index) => (
-              <ProjectCard 
+              <ProjectCard
                 key={index}
                 title={project.title}
                 description={project.description}
