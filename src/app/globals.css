@@ -40,7 +40,7 @@ body {
 }
 
 .project-box {
-  @apply flex items-center justify-between gap-4 me-4 py-3 px-4
+  @apply flex items-center justify-between gap-4 me-2 md:me-4 py-1.5 md:py-3 px-2 md:px-4
 }
 
 .highlighted-text {
